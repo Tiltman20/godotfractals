@@ -1,3 +1,17 @@
-[gd_scene format=3 uid="uid://dk4ghmxbh0yi8"]
+[gd_scene load_steps=5 format=3 uid="uid://dk4ghmxbh0yi8"]
+
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_5v8e4"]
+[ext_resource type="Material" uid="uid://ds6a6obb3jmej" path="res://shader/fractal_shader.tres" id="2_krx21"]
+[ext_resource type="Texture2D" uid="uid://c8g2ne67wavkj" path="res://icon.svg" id="3_nukmc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d211j"]
 
 [node name="Node2D" type="Node2D"]
+material = SubResource("ShaderMaterial_d211j")
+script = ExtResource("1_5v8e4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = ExtResource("2_krx21")
+position = Vector2(573, 319)
+scale = Vector2(8.95312, 4.98437)
+texture = ExtResource("3_nukmc")
